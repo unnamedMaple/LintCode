@@ -1,4 +1,3 @@
-#include <iostream>
 int digitCounts(int k, int n) {
 	// write your code here
 	int sum = 0;
@@ -28,11 +27,4 @@ int digitCounts(int k, int n) {
 		tmp *= 10;
 	}
 	return sum;
-}
-
-int main()
-{
-	std::cout << digitCounts(2, 302);
-	while (1);
-	return 0;
 }

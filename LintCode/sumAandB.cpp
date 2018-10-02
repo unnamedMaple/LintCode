@@ -13,9 +13,6 @@ int  sumAandB(int a, int b)
 		sum = sum ^ (b);
 
 
-
-
-
 	}
 	return sum;
 }

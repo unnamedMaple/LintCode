@@ -1,5 +1,4 @@
 
-#include <iostream>
 int countTailZero(int n)
 {
 	int num = 0;
