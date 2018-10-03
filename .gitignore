@@ -34,3 +34,5 @@
 #VS
 *.vcxproj
 *.vcxproj.filters
+Debug
+LintCode.sdf
