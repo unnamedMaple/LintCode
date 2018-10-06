@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 int nthUglyNumber(int n);
 int  sumAandB(int a, int b);
