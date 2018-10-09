@@ -5,6 +5,7 @@
 #include <stack>
 using namespace std;
 vector<string> fizzBuzz(int n);
+int binarySearch(vector<int> &nums, int target);
 /*
 
 int nthUglyNumber(int n);
