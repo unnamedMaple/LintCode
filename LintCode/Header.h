@@ -4,9 +4,12 @@
 #include <string>
 #include <stack>
 using namespace std;
+
+vector<vector<int>> permute(vector<int> &nums);
+/*
 vector<string> fizzBuzz(int n);
 int binarySearch(vector<int> &nums, int target);
-/*
+
 
 int nthUglyNumber(int n);
 int  sumAandB(int a, int b);
