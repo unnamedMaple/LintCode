@@ -2,11 +2,11 @@
 #include "Header.h"
 using namespace std;
 int main(){
-	int num[] = { 1, 2, 3 };
+	int num[] = { 1,2,5 };
 	vector<int> nums(&num[0],&num[3]);
 
-	vector<vector<int>>p = permute(nums);
-
+	vector<vector<int>>p = subsets(nums);
+	
 	for (int j = 0; j < p.size(); j++){
 		vector<int> it = p[j];
 		for (int i = 0; i < it.size(); i++){
@@ -14,6 +14,7 @@ int main(){
 		}
 		cout << endl;
 	}
+	
 	while (1);
 	return 0;
 }
