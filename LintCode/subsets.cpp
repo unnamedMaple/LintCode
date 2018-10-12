@@ -1,6 +1,6 @@
 #include "Header.h"
-vector<vector<int>> subsets(vector<int> &nums) {
-	// write your code here
+
+vector<vector<int>> reSubsets(vector<int> &nums){
 	vector<vector<int>>ret;
 
 
@@ -18,13 +18,13 @@ vector<vector<int>> subsets(vector<int> &nums) {
 
 
 	int fir = nums[0];
-	
+
 	vector<int>subnums;
 	for (int i = 1; i < nums.size(); i++){
 		subnums.push_back(nums[i]);
 	}
 
-	vector<vector<int>>sub = subsets(subnums);
+	vector<vector<int>>sub = reSubsets(subnums);
 	for (int j = 0; j < sub.size(); j++){
 		vector<int>tmp = sub[j];
 		tmp.insert(tmp.begin(), fir);
@@ -32,5 +32,14 @@ vector<vector<int>> subsets(vector<int> &nums) {
 	}
 	ret.insert(ret.end(), sub.begin(), sub.end());
 
+	return ret;
+}
+
+
+
+vector<vector<int>> subsets(vector<int> &nums) {
+	// write your code here
+	sort(nums.begin(),nums.end());
+	vector<vector<int>>ret = reSubsets(nums);
 	return ret;
 }

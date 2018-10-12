@@ -2,7 +2,8 @@
 #include "Header.h"
 using namespace std;
 int main(){
-	int num[] = { 1,2,5 };
+	/*
+	int num[] = { 4,1,0 };
 	vector<int> nums(&num[0],&num[3]);
 
 	vector<vector<int>>p = subsets(nums);
@@ -14,7 +15,13 @@ int main(){
 		}
 		cout << endl;
 	}
-	
+	*/
+
+	vector<pair<int, double>>list = dicesSum(2);
+	for (int i = 0; i < list.size(); i++){
+		pair<int, double>p = list[i];
+		cout << p.first << " " << p.second << endl;
+	}
 	while (1);
 	return 0;
 }
