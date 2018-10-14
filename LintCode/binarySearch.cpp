@@ -3,9 +3,15 @@
 int binarySearch(vector<int> &nums, int target) {
 	// write your code here
 
+	if (nums.size() == 0){
+		return -1;
+	}
+
 	int left = 0;
 	int right = nums.size();
 	int mid = 0;
+	
+
 	while (left <= right){
 		mid = (left + right) / 2;
 		if (nums[mid] == target){

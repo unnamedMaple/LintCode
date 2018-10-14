@@ -1,6 +1,6 @@
 
 #include "Header.h"
-using namespace std;
+
 int main(){
 	/*
 	int num[] = { 4,1,0 };
@@ -15,12 +15,38 @@ int main(){
 		}
 		cout << endl;
 	}
-	*/
+	
 
 	vector<pair<int, double>>list = dicesSum(2);
 	for (int i = 0; i < list.size(); i++){
 		pair<int, double>p = list[i];
 		cout << p.first << " " << p.second << endl;
+	}
+	
+
+	string s1 = "aabcc";
+	string s2 = "dbbca";
+	string s3 = "aadbbbaccc";
+
+	if (isInterleave(s1,s2,s3)){
+	
+	
+		cout << "yes";
+	}
+	else{
+		cout << s1.length() << " " << s2.length() << " " << s3.length();
+		cout << "no";
+	}
+	*/
+
+	int num[] = { 4, 1, 0 };
+	vector<int> nums(&num[0], &num[3]);
+	vector<int>::iterator itL = nums.begin(), itR = nums.begin()+1;
+	itL = nums.erase(itL);
+	itR = nums.erase(itR);
+
+	for (itR = nums.begin(); itR != nums.end(); itR++){
+		cout << *itR << " ";
 	}
 	while (1);
 	return 0;
