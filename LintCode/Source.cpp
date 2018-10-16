@@ -37,7 +37,7 @@ int main(){
 		cout << s1.length() << " " << s2.length() << " " << s3.length();
 		cout << "no";
 	}
-	*/
+	
 
 	int num[] = { 4, 1, 0 };
 	vector<int> nums(&num[0], &num[3]);
@@ -48,6 +48,31 @@ int main(){
 	for (itR = nums.begin(); itR != nums.end(); itR++){
 		cout << *itR << " ";
 	}
+	
+
+	int num[] = { 3, 2, 2,1 };
+
+	vector<int> nums(&num[0], &num[4]);
+
+	//cout<<partitionArray(nums, 2);
+	vector<int>::iterator itR;
+
+	nums.insert(nums.begin() + 1, 4);
+	nums.erase(nums.begin() + 1);
+	for (itR = nums.begin(); itR != nums.end(); itR++){
+		cout << *itR << " ";
+	}
+	*/
+
+	vector<vector<string>>q = solveNQueens(4);
+	for (int i = 0; i < q.size(); i++){
+		vector<string>t = q[i];
+		for (int j = 0; j < t.size(); j++){
+			cout << t[j] << "  ";
+		}
+		cout << endl;
+	}
+
 	while (1);
 	return 0;
 }

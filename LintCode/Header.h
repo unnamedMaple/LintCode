@@ -32,3 +32,5 @@ vector<pair<int, double>> dicesSum(int n);
 vector<int> flatten(vector<NestedInteger> &nestedList);
 */
 bool isInterleave(string &s1, string &s2, string &s3);
+int partitionArray(vector<int> &nums, int k);
+vector<vector<string>> solveNQueens(int n);
