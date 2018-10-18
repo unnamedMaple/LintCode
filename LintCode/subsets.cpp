@@ -2,8 +2,6 @@
 
 vector<vector<int>> reSubsets(vector<int> &nums){
 	vector<vector<int>>ret;
-
-
 	if (nums.size() == 0){
 		vector<int>empty;
 		ret.push_back(empty);
@@ -15,15 +13,11 @@ vector<vector<int>> reSubsets(vector<int> &nums){
 		ret.push_back(nums);
 		return ret;
 	}
-
-
 	int fir = nums[0];
-
 	vector<int>subnums;
 	for (int i = 1; i < nums.size(); i++){
 		subnums.push_back(nums[i]);
 	}
-
 	vector<vector<int>>sub = reSubsets(subnums);
 	for (int j = 0; j < sub.size(); j++){
 		vector<int>tmp = sub[j];
@@ -31,7 +25,6 @@ vector<vector<int>> reSubsets(vector<int> &nums){
 		ret.push_back(tmp);
 	}
 	ret.insert(ret.end(), sub.begin(), sub.end());
-
 	return ret;
 }
 

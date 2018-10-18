@@ -2,20 +2,16 @@
 #include "Header.h"
 
 int main(){
-	/*
-	int num[] = { 4,1,0 };
-	vector<int> nums(&num[0],&num[3]);
+	
+	int num[] = { 4, 5, 1, 2, 3 };
+	vector<int> nums(&num[0],&num[5]);
 
-	vector<vector<int>>p = subsets(nums);
+	recoverRotatedSortedArray(nums);
 	
-	for (int j = 0; j < p.size(); j++){
-		vector<int> it = p[j];
-		for (int i = 0; i < it.size(); i++){
-			cout << it[i] << " ";
-		}
-		cout << endl;
+	for (int j = 0; j < nums.size(); j++){
+		cout << nums[j]<<" ";
 	}
-	
+	/*
 
 	vector<pair<int, double>>list = dicesSum(2);
 	for (int i = 0; i < list.size(); i++){
@@ -62,7 +58,7 @@ int main(){
 	for (itR = nums.begin(); itR != nums.end(); itR++){
 		cout << *itR << " ";
 	}
-	*/
+	
 
 	vector<vector<string>>q = solveNQueens(4);
 	for (int i = 0; i < q.size(); i++){
@@ -72,7 +68,7 @@ int main(){
 		}
 		cout << endl;
 	}
-
+	*/
 	while (1);
 	return 0;
 }
