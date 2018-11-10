@@ -8,7 +8,7 @@ int binarySearch(vector<int> &nums, int target) {
 	}
 
 	int left = 0;
-	int right = nums.size();
+	int right = nums.size()-1;
 	int mid = 0;
 	
 

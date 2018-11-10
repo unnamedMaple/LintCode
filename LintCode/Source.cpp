@@ -4,6 +4,10 @@
 int main(){
 	
 	int num[] = { 4, 5, 1, 2, 3 };
+
+
+
+
 	vector<int> nums(&num[0],&num[5]);
 
 	recoverRotatedSortedArray(nums);
@@ -11,6 +15,9 @@ int main(){
 	for (int j = 0; j < nums.size(); j++){
 		cout << nums[j]<<" ";
 	}
+
+	
+
 	/*
 
 	vector<pair<int, double>>list = dicesSum(2);
