@@ -147,7 +147,75 @@ int maxSubArray3(vector<int> &nums, int k) {
 
 
 int maxDiffSubArrays(vector<int> &nums){
-	int max;
+	int max = -9999;
+	int min = -9999;
+	int n = nums.size();
+	int *left = new int[2*n];
+	int *right = new int[2*n];
+
+	int minus = 0;
+	int mi = 0;
+	for (int i = 0; i < nums.size(); i++){
+		minus += nums[i]; 
+		
+		if (minus > max){
+			max = minus;
+		}
+		if (minus<0){
+			minus = 0;
+		}
+		left[i] = max;
+
+
+		mi += -1 * nums[i];
+		if (mi > min){
+			min = mi;
+		}
+		if (mi<0){
+			mi = 0;
+		}
+		left[n + i] = min;
+
+	}
+
+	max = -99999;
+	min = -9999;
+	minus = 0;
+	mi = 0;
+	for (int i = nums.size() - 1; i >= 0; i--){
+		minus += -1*nums[i];
+		if (minus > max){
+			max = minus;
+		}
+		if (minus<0){
+			minus = 0;
+		}
+		right[i] = max;
+
+		mi +=  nums[i];
+		if (mi > min){
+			min = mi;
+		}
+		if (mi<0){
+			mi = 0;
+		}
+		right[n + i] = mi;
+
+
+	}
+
+	max = -99999;
+	minus = 0;
+	for (int i = 0; i < nums.size() - 1; i++){
+		minus =abs( left[i] - (-1*right[i + 1]));
+		min = abs(right[n + i+1] - (-1 * left[n + i]));
+		if (minus > max){
+			max = minus;
+		}
+		else if (min > max){
+			max = min;
+		}
+	}
 
 	return max;
 }

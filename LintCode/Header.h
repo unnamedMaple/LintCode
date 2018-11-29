@@ -48,3 +48,4 @@ vector<vector<string>> solveNQueens(int n);
 vector<vector<int>> subsetsWithDup(vector<int> &nums);
 void recoverRotatedSortedArray(vector<int> &nums);
 string reverseWords(string &s);
+int atoi(string &str);

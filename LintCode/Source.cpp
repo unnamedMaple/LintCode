@@ -2,7 +2,7 @@
 #include "Header.h"
 
 int main(){
-	
+	/*
 	int num[] = { 4, 5, 1, 2, 3 };
 
 
@@ -15,9 +15,9 @@ int main(){
 	for (int j = 0; j < nums.size(); j++){
 		cout << nums[j]<<" ";
 	}
-
+	*/
 	
-
+	cout << atoi("10") << " end";
 	/*
 
 	vector<pair<int, double>>list = dicesSum(2);

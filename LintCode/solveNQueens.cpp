@@ -1,21 +1,13 @@
 #include "Header.h"
 vector<vector<string> > res;
-
-vector<vector<string>> solveNQueens(int n) {
-	// write your code here
-	if (n == 0){
-		return res;
-	}
-
-	vector<int>Q(n, -1);
-	reNqueens(Q, 0);
-	
-	return res;
-
-	
+bool isValid(vector<int> &state, int row, int col)
+{
+	for (int i = 0; i < row; i++)
+		if (state[i] == col || abs(row - i) == abs(col - state[i]))
+			return false;
+	return true;
 }
-
-void reNqueens( vector<int>&Q, int n){
+void reNqueens(vector<int>&Q, int n){
 	int size = Q.size();
 	if (n == size){
 		vector<string>tmpres(n, string(n, '.'));
@@ -33,12 +25,20 @@ void reNqueens( vector<int>&Q, int n){
 			Q[n] = -1;;
 		}
 }
+vector<vector<string>> solveNQueens(int n) {
+	// write your code here
+	if (n == 0){
+		return res;
+	}
 
+	vector<int>Q(n, -1);
+	reNqueens(Q, 0);
+	
+	return res;
 
-bool isValid(vector<int> &state, int row, int col)
-{
-	for (int i = 0; i < row; i++)
-		if (state[i] == col || abs(row - i) == abs(col - state[i]))
-			return false;
-	return true;
+	
 }
+
+
+
+
